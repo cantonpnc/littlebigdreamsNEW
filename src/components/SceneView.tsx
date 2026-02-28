@@ -76,7 +76,7 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
 
       {/* Choices - Bottom Center */}
       {showChoices && (
-        <div className="absolute inset-x-0 bottom-0 p-8 pb-12 flex flex-wrap gap-4 md:gap-6 justify-center bg-gradient-to-t from-black/60 to-transparent">
+        <div className="absolute inset-x-0 bottom-0 p-6 pb-8 md:pb-20 flex flex-wrap gap-4 md:gap-6 justify-center bg-gradient-to-t from-black/60 to-transparent">
           {scene.choices.map((choice, i) => (
             <ChoiceButton
               key={choice.next}
