@@ -17,36 +17,40 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
     setShowChoices(false);
     setTransitioning(false);
 
-    // Use SpeechSynthesis for narration
-    const utterance = new SpeechSynthesisUtterance(scene.text);
-    utterance.rate = 0.85;
-    utterance.pitch = 1.2;
-    utterance.onend = () => setShowChoices(true);
+    // Audio Narration
+    const audio = new Audio(scene.audio);
+    
+    const playAudio = async () => {
+      try {
+        await audio.play();
+        audio.onended = () => setShowChoices(true);
+      } catch (err) {
+        console.error("Audio playback error:", err);
+        // Fallback: show choices after timeout if audio fails
+        setTimeout(() => setShowChoices(true), 5000);
+      }
+    };
 
+    // Small delay to allow scene transition to complete
     const timer = setTimeout(() => {
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(utterance);
+      playAudio();
     }, 600);
-
-    // Fallback: show choices after timeout
-    const fallback = setTimeout(() => setShowChoices(true), 8000);
 
     return () => {
       clearTimeout(timer);
-      clearTimeout(fallback);
-      window.speechSynthesis.cancel();
+      audio.pause();
+      audio.currentTime = 0;
     };
-  }, [sceneId, scene.text]);
+  }, [sceneId, scene.text, scene.audio]);
 
   const handleChoice = useCallback((nextId: string) => {
     if (transitioning) return;
     setTransitioning(true);
-    window.speechSynthesis.cancel();
     setTimeout(() => onChoice(nextId), 400);
   }, [transitioning, onChoice]);
 
   const imageSrc = sceneImages[scene.image];
-  const isEnding = scene.choices.length === 1 && scene.choices[0].next === "scene1";
+  const isEnding = scene.choices.length === 1 && scene.choices[0].next === "scene-01";
 
   return (
     <div

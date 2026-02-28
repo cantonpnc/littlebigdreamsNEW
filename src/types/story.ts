@@ -4,8 +4,10 @@ export interface Choice {
 }
 
 export interface Scene {
+  id: string;
   text: string;
   image: string;
+  audio: string;
   choices: Choice[];
 }
 
