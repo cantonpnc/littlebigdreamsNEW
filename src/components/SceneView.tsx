@@ -54,28 +54,26 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
 
   return (
     <div
-      className={`flex flex-col h-screen w-screen bg-background transition-opacity duration-400 ${
+      className={`relative h-screen w-screen bg-background overflow-hidden transition-opacity duration-400 ${
         transitioning ? "opacity-0" : "opacity-100"
       }`}
       key={sceneId}
     >
-      {/* Illustration - 60% of screen */}
-      <div className="relative flex-[6] min-h-0 overflow-hidden">
-        <img
-          src={imageSrc}
-          alt="Story scene"
-          className="w-full h-full object-cover animate-scene-enter"
-        />
-      </div>
+      {/* Full Screen Background Image */}
+      <img
+        src={imageSrc}
+        alt="Story scene"
+        className="absolute inset-0 w-full h-full object-cover animate-scene-enter"
+      />
 
-      {/* Text + Choices - 40% of screen */}
-      <div className="flex-[4] flex flex-col items-center justify-center gap-4 md:gap-6 px-6 md:px-12 py-4 bg-background">
-        <p className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground text-center leading-relaxed max-w-4xl animate-fade-up">
+      {/* Text Overlay - Bottom Center */}
+      <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end min-h-[40vh]">
+        <p className="font-display text-xl md:text-2xl lg:text-3xl text-white text-center leading-relaxed max-w-4xl animate-fade-up drop-shadow-md mb-8">
           {scene.text}
         </p>
 
         {showChoices && (
-          <div className="flex flex-wrap gap-4 md:gap-6 justify-center mt-2">
+          <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
             {scene.choices.map((choice, i) => (
               <ChoiceButton
                 key={choice.next}
