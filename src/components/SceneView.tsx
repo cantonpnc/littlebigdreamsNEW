@@ -31,10 +31,11 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
       }
     };
 
-    // Small delay to allow scene transition to complete
+    // Longer delay for first scene load, shorter for transitions
+    const delay = sceneId === "scene-01" ? 3000 : 600;
     const timer = setTimeout(() => {
       playAudio();
-    }, 600);
+    }, delay);
 
     return () => {
       clearTimeout(timer);
