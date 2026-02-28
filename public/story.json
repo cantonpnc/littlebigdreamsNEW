@@ -1,0 +1,64 @@
+{
+  "start": "scene1",
+  "scenes": {
+    "scene1": {
+      "text": "Benny the Bunny is going on an adventure! Look — there's a sparkly pond and a cozy treehouse. Where should Benny go?",
+      "image": "scene1",
+      "choices": [
+        { "label": "🌊 Go to the Pond!", "next": "scene2a" },
+        { "label": "🏡 Visit the Treehouse!", "next": "scene2b" }
+      ]
+    },
+    "scene2a": {
+      "text": "Splash! Benny jumps into the sparkly pond! A friendly frog named Freddy waves hello. \"Want to play?\" says Freddy.",
+      "image": "scene2a",
+      "choices": [
+        { "label": "🎵 Sing a Song!", "next": "scene3a" },
+        { "label": "🚣 Build a Boat!", "next": "scene3b" }
+      ]
+    },
+    "scene2b": {
+      "text": "Benny climbs up the ladder to the treehouse. A friendly squirrel named Sally waves. \"Come in!\" she says.",
+      "image": "scene2b",
+      "choices": [
+        { "label": "🍪 Have a Tea Party!", "next": "scene3c" },
+        { "label": "🌙 Watch the Stars!", "next": "scene3d" }
+      ]
+    },
+    "scene3a": {
+      "text": "Benny and Freddy sing together on a lily pad! A beautiful rainbow appears in the sky. What a magical day!",
+      "image": "scene3a",
+      "choices": [
+        { "label": "🌈 The End! Read Again!", "next": "ending" }
+      ]
+    },
+    "scene3b": {
+      "text": "Benny and Freddy build a little boat from sticks and leaves. They sail it across the pond together. Hooray!",
+      "image": "scene3b",
+      "choices": [
+        { "label": "⛵ The End! Read Again!", "next": "ending" }
+      ]
+    },
+    "scene3c": {
+      "text": "Benny and Sally have the coziest tea party! They share cookies and warm tea inside the treehouse. Yummy!",
+      "image": "scene3c",
+      "choices": [
+        { "label": "🍪 The End! Read Again!", "next": "ending" }
+      ]
+    },
+    "scene3d": {
+      "text": "Benny and Sally look out the window at the big moon and twinkling stars. \"So beautiful!\" whispers Benny. Goodnight!",
+      "image": "scene3d",
+      "choices": [
+        { "label": "🌟 The End! Read Again!", "next": "ending" }
+      ]
+    },
+    "ending": {
+      "text": "What a wonderful adventure! Benny waves goodbye to all his friends. The sun sets with hearts and stars in the sky. See you next time!",
+      "image": "ending",
+      "choices": [
+        { "label": "📖 Read Again!", "next": "scene1" }
+      ]
+    }
+  }
+}
