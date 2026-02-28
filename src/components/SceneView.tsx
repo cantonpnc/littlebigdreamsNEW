@@ -66,26 +66,27 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
         className="absolute inset-0 w-full h-full object-cover animate-scene-enter"
       />
 
-      {/* Text Overlay - Bottom Center */}
-      <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end min-h-[40vh]">
-        <p className="font-display text-xl md:text-2xl lg:text-3xl text-white text-center leading-relaxed max-w-4xl animate-fade-up drop-shadow-md mb-8">
+      {/* Text Overlay - Top Center */}
+      <div className="absolute inset-x-0 top-0 p-6 md:p-12 bg-gradient-to-b from-black/80 via-black/40 to-transparent flex flex-col items-center justify-start min-h-[40vh]">
+        <p className="font-display text-xl md:text-2xl lg:text-3xl text-white text-center leading-relaxed max-w-4xl animate-fade-up drop-shadow-md">
           {scene.text}
         </p>
-
-        {showChoices && (
-          <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
-            {scene.choices.map((choice, i) => (
-              <ChoiceButton
-                key={choice.next}
-                label={choice.label}
-                index={i}
-                isRestart={isEnding}
-                onClick={() => handleChoice(choice.next)}
-              />
-            ))}
-          </div>
-        )}
       </div>
+
+      {/* Choices - Bottom Center */}
+      {showChoices && (
+        <div className="absolute inset-x-0 bottom-0 p-8 pb-12 flex flex-wrap gap-4 md:gap-6 justify-center bg-gradient-to-t from-black/60 to-transparent">
+          {scene.choices.map((choice, i) => (
+            <ChoiceButton
+              key={choice.next}
+              label={choice.label}
+              index={i}
+              isRestart={isEnding}
+              onClick={() => handleChoice(choice.next)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
