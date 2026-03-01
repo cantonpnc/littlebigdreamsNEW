@@ -1,10 +1,24 @@
+import { useState } from "react";
+import { usePwaInstall } from "@/hooks/use-pwa-install";
+
 interface HomeScreenProps {
   onSelectStory: (storyFile: string) => void;
 }
 
 export function HomeScreen({ onSelectStory }: HomeScreenProps) {
+  const { install, canInstall, isIos, showInstallOption, isInstalled } = usePwaInstall();
+  const [showIosHint, setShowIosHint] = useState(false);
+
+  const handleInstall = async () => {
+    if (isIos) {
+      setShowIosHint(true);
+    } else if (canInstall) {
+      await install();
+    }
+  };
+
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center gap-8 p-6"
+    <div className="h-screen w-screen flex flex-col items-center justify-center gap-8 p-6 relative"
       style={{ background: "linear-gradient(180deg, hsl(199 80% 85%) 0%, hsl(199 70% 92%) 50%, hsl(45 80% 92%) 100%)" }}
     >
       {/* Decorative clouds */}
@@ -39,6 +53,41 @@ export function HomeScreen({ onSelectStory }: HomeScreenProps) {
           🏙️ Caleb & Jackson's Willis Tower Adventure
         </button>
       </div>
+
+      {/* Install to Home Screen button */}
+      {showInstallOption && (
+        <button
+          onClick={handleInstall}
+          className="font-display text-lg md:text-xl px-6 py-3 rounded-full shadow-md bg-accent text-accent-foreground hover:brightness-110 active:scale-95 transition-all duration-200 animate-fade-up flex items-center gap-2"
+          style={{ animationDelay: "800ms", animationFillMode: "both" }}
+        >
+          📲 Add to Home Screen
+        </button>
+      )}
+
+      {isInstalled && (
+        <p className="font-body text-sm text-muted-foreground animate-fade-up" style={{ animationDelay: "800ms", animationFillMode: "both" }}>
+          ✅ Installed on your device!
+        </p>
+      )}
+
+      {/* iOS install instructions modal */}
+      {showIosHint && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-6" onClick={() => setShowIosHint(false)}>
+          <div className="bg-background rounded-3xl p-6 max-w-sm w-full shadow-xl text-center" onClick={(e) => e.stopPropagation()}>
+            <p className="font-display text-2xl mb-4">📲 Install Story Time!</p>
+            <p className="font-body text-base text-muted-foreground mb-3">
+              Tap the <strong>Share</strong> button <span className="text-xl">⬆️</span> at the bottom of Safari, then tap <strong>"Add to Home Screen"</strong>.
+            </p>
+            <button
+              onClick={() => setShowIosHint(false)}
+              className="font-display text-lg px-6 py-2 rounded-full bg-accent text-accent-foreground mt-2"
+            >
+              Got it!
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Footer decoration */}
       <div className="absolute bottom-6 text-3xl md:text-4xl opacity-50">🌈</div>
