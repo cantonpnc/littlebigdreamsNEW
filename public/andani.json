@@ -237,7 +237,7 @@
     "scene-final": {
       "id": "scene-final",
       "text": "That night the whole family crowded around grandma CeCe's big round table with a deep dish pizza in the middle so tall and gooey and golden that Andani's eyes went wide as dinner plates. He had never tasted anything like it — the cheese stretched in long strings and the sauce was rich and warm. Around the table everyone talked and laughed and told stories, and Andani looked from face to face — Mom, Dad, Caleb, Jackson, grandma CeCe — and felt the biggest warmest fullest feeling he had ever felt in his whole chest. Later that night Caleb and Jackson fell asleep on either side of him on grandma CeCe's big couch, and Andani lay there in the quiet with his travel buddy tucked under his chin, thinking that of all the places in the world, this one — right here, right now — was his favorite.",
-      "image": "andani-11-reunion",
+      "image": "andani-final-pizza",
       "audio": "/audio/andani/scene-final.mp3",
       "choices": [
         { "label": "📖 Read Again!", "next": "home" }

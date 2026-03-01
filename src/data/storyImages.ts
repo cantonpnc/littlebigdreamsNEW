@@ -38,6 +38,7 @@ import andani10Landing from "@/assets/scenes/andani-10-landing.png";
 import andani10aRunning from "@/assets/scenes/andani-10a-running.png";
 import andani10bTunnel from "@/assets/scenes/andani-10b-tunnel.png";
 import andani11Reunion from "@/assets/scenes/andani-11-reunion.png";
+import andaniFinalPizza from "@/assets/scenes/andani-final-pizza.png";
 
 export const sceneImages: Record<string, string> = {
   // Caleb & Jackson Story
@@ -84,4 +85,5 @@ export const sceneImages: Record<string, string> = {
   "andani-10a-running": andani10aRunning,
   "andani-10b-tunnel": andani10bTunnel,
   "andani-11-reunion": andani11Reunion,
+  "andani-final-pizza": andaniFinalPizza,
 };
