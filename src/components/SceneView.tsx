@@ -7,14 +7,16 @@ interface SceneViewProps {
   scene: Scene;
   sceneId: string;
   onChoice: (nextId: string) => void;
+  onHome: () => void;
 }
 
-export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
+export function SceneView({ scene, sceneId, onChoice, onHome }: SceneViewProps) {
   const [showChoices, setShowChoices] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
   const [hasStartedStory, setHasStartedStory] = useState(false);
 
-  const shouldShowStartButton = sceneId === "scene-01" && !hasStartedStory;
+  const isFirstScene = sceneId === "scene-01";
+  const shouldShowStartButton = isFirstScene && !hasStartedStory;
 
   useEffect(() => {
     setShowChoices(false);
@@ -22,7 +24,6 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
 
     if (shouldShowStartButton) return;
 
-    // Audio Narration
     const audio = new Audio(scene.audio);
 
     const playAudio = async () => {
@@ -31,13 +32,11 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
         audio.onended = () => setShowChoices(true);
       } catch (err) {
         console.error("Audio playback error:", err);
-        // Fallback: show choices after timeout if audio fails
         setTimeout(() => setShowChoices(true), 5000);
       }
     };
 
-    // Start quickly after user taps start on first scene
-    const delay = sceneId === "scene-01" ? 100 : 600;
+    const delay = isFirstScene ? 100 : 600;
     const timer = setTimeout(() => {
       void playAudio();
     }, delay);
@@ -47,7 +46,7 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
       audio.pause();
       audio.currentTime = 0;
     };
-  }, [sceneId, scene.audio, shouldShowStartButton]);
+  }, [sceneId, scene.audio, shouldShowStartButton, isFirstScene]);
 
   const handleStartStory = useCallback(() => {
     setHasStartedStory(true);
@@ -60,55 +59,81 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
   }, [transitioning, onChoice]);
 
   const imageSrc = sceneImages[scene.image];
-  const isEnding = scene.choices.length === 1 && scene.choices[0].next === "scene-01";
+  const isEnding = scene.choices.length === 1 && scene.choices[0].next === "home";
 
   return (
     <div
-      className={`relative h-screen w-screen bg-background overflow-hidden transition-opacity duration-400 ${
+      className={`relative h-screen w-screen overflow-hidden transition-opacity duration-400 ${
         transitioning ? "opacity-0" : "opacity-100"
       }`}
+      style={{ background: "hsl(45 80% 94%)" }}
       key={sceneId}
     >
-      {/* Full Screen Background Image */}
-      <img
-        src={imageSrc}
-        alt="Story scene"
-        className="absolute inset-0 w-full h-full object-contain md:object-cover bg-black animate-scene-enter"
-      />
+      {/* Back button */}
+      <button
+        onClick={onHome}
+        className="absolute top-4 left-4 z-30 font-display text-lg md:text-xl bg-white/80 hover:bg-white/95 active:scale-95 rounded-full px-4 py-2 shadow-md transition-all duration-200"
+      >
+        ← Home
+      </button>
 
-      {/* Text Overlay - Top Center */}
-      <div className="absolute inset-x-0 top-0 p-6 md:p-12 bg-gradient-to-b from-black/80 via-black/40 to-transparent flex flex-col items-center justify-start min-h-[40vh]">
-        <p className="font-display text-xl md:text-2xl lg:text-3xl text-white text-center leading-relaxed max-w-4xl animate-fade-up drop-shadow-md">
-          {scene.text}
-        </p>
+      {/* Landscape layout: image takes top portion */}
+      <div className="h-[55vh] md:h-[60vh] w-full relative bg-black">
+        {imageSrc ? (
+          <img
+            src={imageSrc}
+            alt="Story scene"
+            className="w-full h-full object-contain animate-scene-enter"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-6xl animate-wiggle">📖</span>
+          </div>
+        )}
       </div>
 
-      {/* Start Story Button - First Scene */}
-      {shouldShowStartButton && (
-        <div className="absolute inset-x-0 bottom-0 p-6 pb-8 md:pb-20 flex justify-center bg-gradient-to-t from-black/60 to-transparent">
-          <ChoiceButton
-            label="▶️ Start the Story"
-            index={0}
-            isRestart
-            onClick={handleStartStory}
-          />
+      {/* Text area below image */}
+      <div className="h-[45vh] md:h-[40vh] w-full flex flex-col items-center overflow-y-auto">
+        <div className="flex-1 w-full max-w-4xl px-6 py-4 md:py-5 flex items-start justify-center">
+          <p className="font-display text-xl md:text-2xl lg:text-3xl text-foreground text-center leading-relaxed animate-fade-up">
+            {scene.text}
+          </p>
         </div>
-      )}
 
-      {/* Choices - Bottom Center */}
-      {showChoices && (
-        <div className="absolute inset-x-0 bottom-0 p-6 pb-8 md:pb-20 flex flex-wrap gap-4 md:gap-6 justify-center bg-gradient-to-t from-black/60 to-transparent">
-          {scene.choices.map((choice, i) => (
+        {/* Start Story Button - First Scene */}
+        {shouldShowStartButton && (
+          <div className="w-full px-6 pb-6 md:pb-8 flex justify-center">
             <ChoiceButton
-              key={choice.next}
-              label={choice.label}
-              index={i}
-              isRestart={isEnding}
-              onClick={() => handleChoice(choice.next)}
+              label="▶️ Start the Story"
+              index={0}
+              isRestart
+              onClick={handleStartStory}
             />
-          ))}
-        </div>
-      )}
+          </div>
+        )}
+
+        {/* The End message */}
+        {isEnding && showChoices && (
+          <p className="font-display text-3xl md:text-4xl text-foreground animate-bounce-in mb-2">
+            🎉 The End! 🎉
+          </p>
+        )}
+
+        {/* Choices */}
+        {showChoices && (
+          <div className="w-full px-6 pb-6 md:pb-8 flex flex-wrap gap-4 md:gap-6 justify-center">
+            {scene.choices.map((choice, i) => (
+              <ChoiceButton
+                key={choice.next}
+                label={isEnding ? "📖 Read Again!" : choice.label}
+                index={i}
+                isRestart={isEnding}
+                onClick={() => handleChoice(choice.next)}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
