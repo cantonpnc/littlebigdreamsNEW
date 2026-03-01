@@ -3,95 +3,190 @@
   "scenes": {
     "scene-01": {
       "id": "scene-01",
-      "text": "Andani woke up to the sound of birds singing outside her window. Today was a very special day — she was going on her very first airplane ride to Chicago! She put on her favorite yellow dress and her sparkly shoes, grabbed her little backpack, and ran downstairs. 'Are you ready for your big adventure?' asked Daddy with a big smile.",
+      "text": "Andani woke up to the sound of birds singing outside her window in Cape Town. Today was the big day — she was flying all the way to Chicago! She jumped out of bed, ready for her adventure. 'What should we pack first?' Daddy asked.",
       "image": "andani-01-wake",
       "audio": "/audio/andani/scene-01.mp3",
       "choices": [
-        { "label": "✈️ Go to the Airport!", "next": "scene-02" }
+        { "label": "🧸 Pack my Favorite Toy", "next": "scene-02a" },
+        { "label": "🍎 Pack Yummy Snacks", "next": "scene-02b" }
       ]
     },
-    "scene-02": {
-      "id": "scene-02",
-      "text": "At the airport, Andani watched the giant airplanes through the big windows. Some were taking off into the sky and some were landing with a gentle bump. When it was time to board, Andani walked down the long tunnel to the airplane door. A friendly flight attendant said, 'Welcome aboard, Andani! Would you like to sit by the window?'",
-      "image": "andani-02-airport",
-      "audio": "/audio/andani/scene-02.mp3",
+    "scene-02a": {
+      "id": "scene-02a",
+      "text": "Andani grabbed her little blue backpack and carefully tucked her soft elephant toy inside. 'You're coming to America with me!' she whispered. Daddy smiled and zipped up the bag. 'Perfect choice! Now let's head to the airport!'",
+      "image": "andani-02a-pack-toy",
+      "audio": "/audio/andani/scene-02a.mp3",
       "choices": [
-        { "label": "🪟 Sit by the Window", "next": "scene-03a" },
-        { "label": "💺 Sit in the Middle", "next": "scene-03b" }
+        { "label": "🚕 Go to the Airport", "next": "scene-03" }
       ]
     },
-    "scene-03a": {
-      "id": "scene-03a",
-      "text": "Andani pressed her nose against the cold airplane window. When the plane took off, she watched the houses get smaller and smaller until they looked like tiny little toys. The clouds were so close she felt like she could reach out and touch them! 'Look Daddy, we're above the clouds!' she squealed. Soon the pilot announced they were arriving in Chicago.",
-      "image": "andani-03a-window",
-      "audio": "/audio/andani/scene-03a.mp3",
+    "scene-02b": {
+      "id": "scene-02b",
+      "text": "Mommy helped Andani pick out her favorite snacks for the long trip. They packed crackers, apple juice, and bananas into her backpack. 'Yum! Now my tummy won't rumble on the plane,' Andani said with a giggle.",
+      "image": "andani-02b-pack-snacks",
+      "audio": "/audio/andani/scene-02b.mp3",
       "choices": [
-        { "label": "🏙️ Look for Chicago!", "next": "scene-04" }
+        { "label": "🚕 Go to the Airport", "next": "scene-03" }
       ]
     },
-    "scene-03b": {
-      "id": "scene-03b",
-      "text": "Andani sat in the middle seat between Daddy and a nice lady who shared her crackers. The flight attendant brought Andani a special cup of apple juice with a tiny umbrella in it, and she felt like a real grown-up traveler. She drew pictures of airplanes in her coloring book until the pilot said, 'We're about to land in Chicago!'",
-      "image": "andani-03b-middle",
-      "audio": "/audio/andani/scene-03b.mp3",
+    "scene-03": {
+      "id": "scene-03",
+      "text": "The airport was huge and busy! They walked up to the friendly lady at the counter who gave Andani her very own boarding pass with a colorful airplane on it. 'Have a safe flight!' she said with a bright smile.",
+      "image": "andani-03-checkin",
+      "audio": "/audio/andani/scene-03.mp3",
       "choices": [
-        { "label": "🏙️ We're Here!", "next": "scene-04" }
+        { "label": "✈️ Go Watch the Planes", "next": "scene-04a" },
+        { "label": "🛍️ Visit the Shop", "next": "scene-04b" }
       ]
     },
-    "scene-04": {
-      "id": "scene-04",
-      "text": "The airplane landed with a little bump and Andani clapped her hands. Inside the big Chicago airport there were moving sidewalks that made her feel like she was gliding! Daddy held her hand as they walked outside and she saw the tall buildings of Chicago for the very first time. 'Wow, they're so big!' she said, her eyes wide with wonder.",
-      "image": "andani-04-landing",
-      "audio": "/audio/andani/scene-04.mp3",
+    "scene-04a": {
+      "id": "scene-04a",
+      "text": "Andani pressed her face against the big glass window. 'Wow, look at that giant one!' she shouted. The airplanes looked like big silver birds waiting to fly. Daddy pointed to one and said, 'That's our plane!' It was time to board.",
+      "image": "andani-04a-planes",
+      "audio": "/audio/andani/scene-04a.mp3",
       "choices": [
-        { "label": "🌳 Visit the Park", "next": "scene-05a" },
-        { "label": "🍦 Get a Treat First", "next": "scene-05b" }
+        { "label": "🪟 I want the Window Seat!", "next": "scene-05a" },
+        { "label": "💺 I want the Middle Seat!", "next": "scene-05b" }
+      ]
+    },
+    "scene-04b": {
+      "id": "scene-04b",
+      "text": "Before getting on the plane, they stopped at a little shop. Andani found a cute lion toy holding a South African flag! 'He wants to see Chicago too,' she told Mommy. With her new friend in hand, they headed to the gate.",
+      "image": "andani-04b-shop",
+      "audio": "/audio/andani/scene-04b.mp3",
+      "choices": [
+        { "label": "🪟 I want the Window Seat!", "next": "scene-05a" },
+        { "label": "💺 I want the Middle Seat!", "next": "scene-05b" }
       ]
     },
     "scene-05a": {
       "id": "scene-05a",
-      "text": "Daddy took Andani to Millennium Park where the giant silver Bean was sparkling in the sunshine. Andani ran up and saw her own funny reflection — her head looked super tall and wiggly! She laughed and made silly faces at herself in the shiny metal. Then she saw the big fountain where giant faces spit water, and she danced in the splash.",
-      "image": "andani-05a-bean",
+      "text": "Andani sat by the window and looked out at Table Mountain one last time. As the engines roared, she waved goodbye to Cape Town. The plane lifted up, up, up into the sky! Now that they were flying, it was time for an activity.",
+      "image": "andani-05a-window",
       "audio": "/audio/andani/scene-05a.mp3",
       "choices": [
-        { "label": "🎡 Explore More!", "next": "scene-06" }
+        { "label": "🦕 Color Dinosaurs", "next": "scene-06a" },
+        { "label": "🐘 Color Elephants", "next": "scene-06b" }
       ]
     },
     "scene-05b": {
       "id": "scene-05b",
-      "text": "They found a little shop with every flavor of ice cream Andani could imagine. She picked pink strawberry with rainbow sprinkles on top, and Daddy got chocolate. They sat on a bench and watched the busy city people walking by while they licked their cones. A friendly pigeon waddled up hoping for a crumb, and Andani giggled.",
-      "image": "andani-05b-icecream",
+      "text": "Andani sat right in the middle, snug between Mommy and Daddy. The flight attendant gave her a special activity book! 'Look, I have so much room to draw,' she said happily. She opened her crayons, ready to create a masterpiece.",
+      "image": "andani-05b-aisle",
       "audio": "/audio/andani/scene-05b.mp3",
       "choices": [
-        { "label": "🎡 Let's Explore!", "next": "scene-06" }
+        { "label": "🦕 Color Dinosaurs", "next": "scene-06a" },
+        { "label": "🐘 Color Elephants", "next": "scene-06b" }
       ]
     },
-    "scene-06": {
-      "id": "scene-06",
-      "text": "Daddy took Andani on a boat ride down the Chicago River. The buildings on both sides were so tall they seemed to touch the sky. The tour guide pointed at each one and told funny stories about how they were built. Andani waved at people on the bridges above, and they waved back! The water sparkled green and gold in the afternoon sun.",
-      "image": "andani-06-boat",
-      "audio": "/audio/andani/scene-06.mp3",
+    "scene-06a": {
+      "id": "scene-06a",
+      "text": "Andani picked the page with the big T-Rex. She used her green and orange crayons to make him look fierce! Daddy helped color the trees in the background. Suddenly, the plane gave a little bump and shake!",
+      "image": "andani-06a-dinosaurs",
+      "audio": "/audio/andani/scene-06a.mp3",
       "choices": [
-        { "label": "🌅 Watch the Sunset", "next": "scene-07a" },
-        { "label": "🍕 Pizza Time!", "next": "scene-07b" }
+        { "label": "😯 Oh no, what was that?", "next": "scene-07" }
+      ]
+    },
+    "scene-06b": {
+      "id": "scene-06b",
+      "text": "Andani found a picture of a baby elephant splashing water. She colored it gray and blue, humming a happy tune. Mommy said, 'That looks just like the elephants back home!' Suddenly, the plane gave a little bump and shake!",
+      "image": "andani-06b-coloring",
+      "audio": "/audio/andani/scene-06b.mp3",
+      "choices": [
+        { "label": "😯 Oh no, what was that?", "next": "scene-07" }
+      ]
+    },
+    "scene-07": {
+      "id": "scene-07",
+      "text": "The plane wiggled and wobbled. 'It's just a little turbulence,' Daddy said calmly, holding her hand tight. 'Like driving on a bumpy road!' Andani held onto Daddy's arm until the bumping stopped and the ride was smooth again.",
+      "image": "andani-07-turbulence",
+      "audio": "/audio/andani/scene-07.mp3",
+      "choices": [
+        { "label": "🎬 Watch a Movie", "next": "scene-07a" },
+        { "label": "☁️ Look at the Clouds", "next": "scene-07b" }
       ]
     },
     "scene-07a": {
       "id": "scene-07a",
-      "text": "They walked to the lakefront just as the sun started to set. The sky turned pink and orange and purple, and the water of Lake Michigan sparkled like a million tiny diamonds. Andani sat on Daddy's shoulders so she could see everything. 'This is the most beautiful thing I've ever seen,' she whispered. Daddy gave her a big squeeze and said, 'Me too, sweetheart. Me too.'",
-      "image": "andani-07a-sunset",
+      "text": "Andani put on her headphones and started a funny movie about birds. The screen was bright and colorful, and soon she was giggling so loud that the lady behind them smiled. 'Movies on planes are the best!' she whispered.",
+      "image": "andani-07a-movie",
       "audio": "/audio/andani/scene-07a.mp3",
       "choices": [
-        { "label": "📖 The End!", "next": "home" }
+        { "label": "🍝 Dinner Time!", "next": "scene-08a" }
       ]
     },
     "scene-07b": {
       "id": "scene-07b",
-      "text": "They found the most famous deep dish pizza place in all of Chicago. When the pizza arrived, it was as thick as a cake and filled with gooey melted cheese! Andani took one big bite and her eyes went wide — it was the yummiest thing she had ever tasted. She looked at Daddy and said, 'Can we come back to Chicago every single day?' Daddy laughed and said, 'How about every year?' Andani nodded so hard her pigtails bounced.",
-      "image": "andani-07b-pizza",
+      "text": "She looked out the window and saw giant fluffy clouds that looked like castles and dragons. The sun was setting, painting the sky pink and gold. 'It's a magic kingdom up here,' Andani thought, her eyes wide with wonder.",
+      "image": "andani-07b-clouds",
       "audio": "/audio/andani/scene-07b.mp3",
       "choices": [
-        { "label": "📖 The End!", "next": "home" }
+        { "label": "😴 Time for a Nap", "next": "scene-08b" }
+      ]
+    },
+    "scene-08a": {
+      "id": "scene-08a",
+      "text": "The flight attendant brought a hot meal! Andani had pasta and a yummy cookie for dessert. Even her baby brother got a snack. With a full tummy, she started to feel very, very sleepy.",
+      "image": "andani-08a-food",
+      "audio": "/audio/andani/scene-08a.mp3",
+      "choices": [
+        { "label": "🏙️ Are we there yet?", "next": "scene-09" }
+      ]
+    },
+    "scene-08b": {
+      "id": "scene-08b",
+      "text": "It was dark outside now. Andani hugged her teddy bear tight, leaned against the seat, and closed her eyes. Daddy covered her with a warm blanket. She dreamed of flying with the clouds until... 'Wake up, we're here!'",
+      "image": "andani-08b-sleeping",
+      "audio": "/audio/andani/scene-08b.mp3",
+      "choices": [
+        { "label": "🏙️ Look Outside!", "next": "scene-09" }
+      ]
+    },
+    "scene-09": {
+      "id": "scene-09",
+      "text": "Andani rubbed her eyes and looked out the window. 'Daddy, look! Giant buildings!' Chicago rose up from the ground like a glittering forest of glass and steel. It was the biggest city she had ever seen!",
+      "image": "andani-09-chicago",
+      "audio": "/audio/andani/scene-09.mp3",
+      "choices": [
+        { "label": "🌊 Look for the Lake", "next": "scene-09a" },
+        { "label": "🏙️ Find the Tallest Tower", "next": "scene-09b" }
+      ]
+    },
+    "scene-09a": {
+      "id": "scene-09a",
+      "text": "'That big water looks like the ocean!' Andani said. 'That's Lake Michigan,' Mommy explained. It was huge and blue and bordered the city like a beautiful frame. The plane dipped its wing as it circled around for landing.",
+      "image": "andani-09a-lake",
+      "audio": "/audio/andani/scene-09a.mp3",
+      "choices": [
+        { "label": "🛬 Landing Time!", "next": "scene-10" }
+      ]
+    },
+    "scene-09b": {
+      "id": "scene-09b",
+      "text": "'I see a black building with antennas on top!' Andani shouted. 'That's the Willis Tower,' Daddy said. 'We're going to visit that soon!' The city looked so close now she felt she could almost touch it.",
+      "image": "andani-09b-tower",
+      "audio": "/audio/andani/scene-09b.mp3",
+      "choices": [
+        { "label": "🛬 Landing Time!", "next": "scene-10" }
+      ]
+    },
+    "scene-10": {
+      "id": "scene-10",
+      "text": "Thump, bump, whoosh! The wheels touched the ground and the plane slowed down. 'We made it!' Andani clapped her hands. They had flown all the way from Africa to America. Now for the last part of the journey.",
+      "image": "andani-10-landing",
+      "audio": "/audio/andani/scene-10.mp3",
+      "choices": [
+        { "label": "🏃 Run to Grandma!", "next": "scene-10a" }
+      ]
+    },
+    "scene-10a": {
+      "id": "scene-10a",
+      "text": "They walked through the busy airport until they saw a familiar face waiting for them. 'Grandma!' Andani dropped her bag and ran as fast as her little legs could go. Grandma scooped her up in a big hug. 'Welcome to Chicago, my little traveler!'",
+      "image": "andani-10a-running",
+      "audio": "/audio/andani/scene-10a.mp3",
+      "choices": [
+        { "label": "📖 Read Again!", "next": "home" }
       ]
     }
   }
