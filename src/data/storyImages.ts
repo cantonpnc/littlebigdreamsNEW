@@ -59,25 +59,27 @@ export const sceneImages: Record<string, string> = {
   "scene-07-pizza": scene07Pizza,
 
   // Andani Story
-  "andani-01-wake": andani01Wake,
-  "andani-02a-pack-toy": andani02aStuffedAnimal,
-  "andani-02b-pack-snacks": andani02bSnacks,
+  "andani-01-bedroom": andani01Wake,
+  "andani-02a-stuffedanimal": andani02aStuffedAnimal,
+  "andani-02b-snacks": andani02bSnacks,
   "andani-03-checkin": andani03Checkin,
   "andani-04a-planes": andani04aPlanes,
   "andani-04b-shop": andani04bShop,
-  "andani-05a-window": andani05aWindow,
+  "andani-05-boarding": andani05aWindow, // Using window as default for boarding decision scene
+  "andani-05a-windowseat": andani05aWindow,
   "andani-05b-aisle": andani05bAisle,
+  "andani-06-activitypack": andani06bColoring, // Using coloring as default for activity pack
   "andani-06a-dinosaurs": andani06aDinosaurs,
   "andani-06b-coloring": andani06bColoring,
   "andani-07-turbulence": andani07Turbulence,
   "andani-07a-movie": andani07aMovie,
   "andani-07b-clouds": andani07bClouds,
-  "andani-08a-food": andani08aFood,
+  "andani-08-food": andani08aFood, // Food served
+  "andani-08a-eating": andani08aFood,
   "andani-08b-sleeping": andani08bSleeping,
   "andani-09-chicago": andani09Chicago,
-  "andani-09a-lake": andani09aLake,
-  "andani-09b-tower": andani09bTower,
-  "andani-09b-tower-2": andani09bTower, // Backup in case
+  "andani-09a-lakemichigan": andani09aLake,
+  "andani-09b-willistower": andani09bTower,
   "andani-10-landing": andani10Landing,
   "andani-10a-running": andani10aRunning,
   "andani-10b-tunnel": andani10bTunnel,
