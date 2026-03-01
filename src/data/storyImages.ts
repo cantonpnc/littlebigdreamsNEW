@@ -36,6 +36,8 @@ import andani09aLake from "@/assets/scenes/andani-09a-lakemichigan.png";
 import andani09bTower from "@/assets/scenes/andani-09b-willistower.png";
 import andani10Landing from "@/assets/scenes/andani-10-landing.png";
 import andani10aRunning from "@/assets/scenes/andani-10a-running.png";
+import andani10bTunnel from "@/assets/scenes/andani-10b-tunnel.png";
+import andani11Reunion from "@/assets/scenes/andani-11-reunion.png";
 
 export const sceneImages: Record<string, string> = {
   // Caleb & Jackson Story
@@ -75,6 +77,9 @@ export const sceneImages: Record<string, string> = {
   "andani-09-chicago": andani09Chicago,
   "andani-09a-lake": andani09aLake,
   "andani-09b-tower": andani09bTower,
+  "andani-09b-tower-2": andani09bTower, // Backup in case
   "andani-10-landing": andani10Landing,
   "andani-10a-running": andani10aRunning,
+  "andani-10b-tunnel": andani10bTunnel,
+  "andani-11-reunion": andani11Reunion,
 };
