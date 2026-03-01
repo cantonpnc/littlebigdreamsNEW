@@ -22,6 +22,7 @@ import andani02bSnacks from "@/assets/scenes/andani-02b-snacks.png";
 import andani03Checkin from "@/assets/scenes/andani-03-checkin.png";
 import andani04aPlanes from "@/assets/scenes/andani-04a-planes.png";
 import andani04bShop from "@/assets/scenes/andani-04b-shop.png";
+import andani05Boarding from "@/assets/scenes/andani-05-boarding.png";
 import andani05aWindow from "@/assets/scenes/andani-05a-windowseat.png";
 import andani05bAisle from "@/assets/scenes/andani-05b-aisle.png";
 import andani06aDinosaurs from "@/assets/scenes/andani-06a-dinosaurs.png";
@@ -66,7 +67,7 @@ export const sceneImages: Record<string, string> = {
   "andani-03-checkin": andani03Checkin,
   "andani-04a-planes": andani04aPlanes,
   "andani-04b-shop": andani04bShop,
-  "andani-05-boarding": andani05aWindow, // Using window as default for boarding decision scene
+  "andani-05-boarding": andani05Boarding,
   "andani-05a-windowseat": andani05aWindow,
   "andani-05b-aisle": andani05bAisle,
   "andani-06-activitypack": andani06bColoring, // Using coloring as default for activity pack
