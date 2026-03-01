@@ -37,7 +37,7 @@
       "image": "scene-03a-hotdog",
       "audio": "/audio/scene-03a-hotdog.mp3",
       "choices": [
-        { "label": "🚌 Hop on a City Bus", "next": "scene-04a" },
+        { "label": "🚌 Take the Bus", "next": "scene-04a" },
         { "label": "🛴 Rent a Scooter", "next": "scene-04b" }
       ]
     },
@@ -57,7 +57,7 @@
       "image": "scene-03c-bean",
       "audio": "/audio/scene-03c-bean.mp3",
       "choices": [
-        { "label": "🚌 Hop on a City Bus", "next": "scene-04a" },
+        { "label": "🚌 Take the Bus", "next": "scene-04a" },
         { "label": "🛴 Rent a Scooter", "next": "scene-04b" }
       ]
     },
