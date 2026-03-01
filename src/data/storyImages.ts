@@ -25,6 +25,7 @@ import andani04bShop from "@/assets/scenes/andani-04b-shop.png";
 import andani05Boarding from "@/assets/scenes/andani-05-boarding.png";
 import andani05aWindow from "@/assets/scenes/andani-05a-windowseat.png";
 import andani05bAisle from "@/assets/scenes/andani-05b-aisle.png";
+import andani06ActivityPack from "@/assets/scenes/andani-06-activitypack.png";
 import andani06aDinosaurs from "@/assets/scenes/andani-06a-dinosaurs.png";
 import andani06bColoring from "@/assets/scenes/andani-06b-coloring.png";
 import andani07Turbulence from "@/assets/scenes/andani-07-turbulence.png";
@@ -70,7 +71,7 @@ export const sceneImages: Record<string, string> = {
   "andani-05-boarding": andani05Boarding,
   "andani-05a-windowseat": andani05aWindow,
   "andani-05b-aisle": andani05bAisle,
-  "andani-06-activitypack": andani06bColoring, // Using coloring as default for activity pack
+  "andani-06-activitypack": andani06ActivityPack,
   "andani-06a-dinosaurs": andani06aDinosaurs,
   "andani-06b-coloring": andani06bColoring,
   "andani-07-turbulence": andani07Turbulence,
