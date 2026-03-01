@@ -73,7 +73,7 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
       <img
         src={imageSrc}
         alt="Story scene"
-        className="absolute inset-0 w-full h-full object-cover animate-scene-enter"
+        className="absolute inset-0 w-full h-full object-contain md:object-cover bg-black animate-scene-enter"
       />
 
       {/* Text Overlay - Top Center */}
