@@ -63,7 +63,7 @@ export function SceneView({ scene, sceneId, onChoice, onHome }: SceneViewProps) 
 
   return (
     <div
-      className={`relative h-screen w-screen overflow-hidden transition-opacity duration-400 ${
+      className={`relative h-screen w-screen flex flex-col overflow-hidden transition-opacity duration-400 ${
         transitioning ? "opacity-0" : "opacity-100"
       }`}
       style={{ background: "hsl(45 80% 94%)" }}
@@ -77,8 +77,8 @@ export function SceneView({ scene, sceneId, onChoice, onHome }: SceneViewProps) 
         ← Home
       </button>
 
-      {/* Landscape layout: image takes top portion */}
-      <div className="h-[55vh] md:h-[60vh] w-full relative bg-black">
+      {/* Image section - larger on mobile */}
+      <div className="h-[70vh] md:h-[60vh] w-full relative bg-black flex-shrink-0">
         {imageSrc ? (
           <img
             src={imageSrc}
@@ -90,19 +90,46 @@ export function SceneView({ scene, sceneId, onChoice, onHome }: SceneViewProps) 
             <span className="text-6xl animate-wiggle">📖</span>
           </div>
         )}
+
+        {/* Choices overlaid on bottom of image on mobile */}
+        {showChoices && (
+          <div className="absolute bottom-4 left-0 right-0 md:hidden flex flex-wrap gap-3 justify-center px-4 z-20">
+            {scene.choices.map((choice, i) => (
+              <ChoiceButton
+                key={choice.next}
+                label={isEnding ? "📖 Read Again!" : choice.label}
+                index={i}
+                isRestart={isEnding}
+                onClick={() => handleChoice(choice.next)}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Start button overlaid on mobile */}
+        {shouldShowStartButton && (
+          <div className="absolute bottom-4 left-0 right-0 md:hidden flex justify-center px-4 z-20">
+            <ChoiceButton
+              label="▶️ Start the Story"
+              index={0}
+              isRestart
+              onClick={handleStartStory}
+            />
+          </div>
+        )}
       </div>
 
-      {/* Text area below image */}
-      <div className="h-[45vh] md:h-[40vh] w-full flex flex-col items-center overflow-y-auto">
-        <div className="flex-1 w-full max-w-4xl px-6 py-4 md:py-5 flex items-start justify-center">
-          <p className="font-display text-xl md:text-2xl lg:text-3xl text-foreground text-center leading-relaxed animate-fade-up">
+      {/* Scrollable text area below image */}
+      <div className="flex-1 w-full flex flex-col items-center overflow-y-auto">
+        <div className="flex-1 w-full max-w-4xl px-5 py-3 md:px-6 md:py-5 flex items-start justify-center">
+          <p className="font-display text-lg md:text-2xl lg:text-3xl text-foreground text-center leading-relaxed animate-fade-up">
             {scene.text}
           </p>
         </div>
 
-        {/* Start Story Button - First Scene */}
+        {/* Start Story Button - desktop only (mobile is overlaid) */}
         {shouldShowStartButton && (
-          <div className="w-full px-6 pb-6 md:pb-8 flex justify-center">
+          <div className="hidden md:flex w-full px-6 pb-8 justify-center">
             <ChoiceButton
               label="▶️ Start the Story"
               index={0}
@@ -119,9 +146,9 @@ export function SceneView({ scene, sceneId, onChoice, onHome }: SceneViewProps) 
           </p>
         )}
 
-        {/* Choices */}
+        {/* Choices - desktop only (mobile is overlaid on image) */}
         {showChoices && (
-          <div className="w-full px-6 pb-6 md:pb-8 flex flex-wrap gap-4 md:gap-6 justify-center">
+          <div className="hidden md:flex w-full px-6 pb-8 flex-wrap gap-6 justify-center">
             {scene.choices.map((choice, i) => (
               <ChoiceButton
                 key={choice.next}
