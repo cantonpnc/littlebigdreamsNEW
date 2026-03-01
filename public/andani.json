@@ -173,18 +173,37 @@
     },
     "scene-10": {
       "id": "scene-10",
-      "text": "Thump, bump, whoosh! The wheels touched the ground and the plane slowed down. 'We made it!' Andani clapped her hands. They had flown all the way from Africa to America. Now for the last part of the journey.",
+      "text": "Thump, bump, whoosh! The wheels touched the ground and the plane slowed down. 'We made it!' Andani clapped her hands. They had flown all the way from Africa to America. Now for the last part of the journey through the airport!",
       "image": "andani-10-landing",
       "audio": "/audio/andani/scene-10.mp3",
       "choices": [
-        { "label": "🏃 Run to Grandma!", "next": "scene-10a" }
+        { "label": "🌈 Find the Magic Tunnel", "next": "scene-10b" },
+        { "label": "🏃 Run to Baggage Claim", "next": "scene-10a" }
       ]
     },
     "scene-10a": {
       "id": "scene-10a",
-      "text": "They walked through the busy airport until they saw a familiar face waiting for them. 'Grandma!' Andani dropped her bag and ran as fast as her little legs could go. Grandma scooped her up in a big hug. 'Welcome to Chicago, my little traveler!'",
+      "text": "Andani zoomed through the shiny airport terminal, her sneakers squeaking on the floor. She dodged suitcases and busy people. 'I'm a fast race car!' she giggled. Daddy laughed and said, 'Slow down, speed racer, we're almost there!'",
       "image": "andani-10a-running",
       "audio": "/audio/andani/scene-10a.mp3",
+      "choices": [
+        { "label": "🏡 Go to Grandma's House!", "next": "scene-11" }
+      ]
+    },
+    "scene-10b": {
+      "id": "scene-10b",
+      "text": "They walked into a long tunnel where the walls were made of colorful lights! 'It's a rainbow!' Andani gasped. The colors changed from red to blue to purple. She danced all the way through, feeling like she was inside a kaleidoscope.",
+      "image": "andani-10b-tunnel",
+      "audio": "/audio/andani/scene-10b.mp3",
+      "choices": [
+        { "label": "🏡 Go to Grandma's House!", "next": "scene-11" }
+      ]
+    },
+    "scene-11": {
+      "id": "scene-11",
+      "text": "The taxi pulled up to a lovely yellow house with a red door. Suddenly, the door flew open! 'Andani!' shouted her cousins, running out in their pajamas to hug her. Grandma stood on the porch with open arms. 'Welcome home, my darling,' she said. It was the best adventure ever.",
+      "image": "andani-11-reunion",
+      "audio": "/audio/andani/scene-11.mp3",
       "choices": [
         { "label": "📖 Read Again!", "next": "home" }
       ]
