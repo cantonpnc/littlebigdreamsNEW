@@ -1,0 +1,98 @@
+{
+  "start": "scene-01",
+  "scenes": {
+    "scene-01": {
+      "id": "scene-01",
+      "text": "Andani woke up to the sound of birds singing outside her window. Today was a very special day — she was going on her very first airplane ride to Chicago! She put on her favorite yellow dress and her sparkly shoes, grabbed her little backpack, and ran downstairs. 'Are you ready for your big adventure?' asked Daddy with a big smile.",
+      "image": "andani-01-wake",
+      "audio": "/audio/andani/scene-01.mp3",
+      "choices": [
+        { "label": "✈️ Go to the Airport!", "next": "scene-02" }
+      ]
+    },
+    "scene-02": {
+      "id": "scene-02",
+      "text": "At the airport, Andani watched the giant airplanes through the big windows. Some were taking off into the sky and some were landing with a gentle bump. When it was time to board, Andani walked down the long tunnel to the airplane door. A friendly flight attendant said, 'Welcome aboard, Andani! Would you like to sit by the window?'",
+      "image": "andani-02-airport",
+      "audio": "/audio/andani/scene-02.mp3",
+      "choices": [
+        { "label": "🪟 Sit by the Window", "next": "scene-03a" },
+        { "label": "💺 Sit in the Middle", "next": "scene-03b" }
+      ]
+    },
+    "scene-03a": {
+      "id": "scene-03a",
+      "text": "Andani pressed her nose against the cold airplane window. When the plane took off, she watched the houses get smaller and smaller until they looked like tiny little toys. The clouds were so close she felt like she could reach out and touch them! 'Look Daddy, we're above the clouds!' she squealed. Soon the pilot announced they were arriving in Chicago.",
+      "image": "andani-03a-window",
+      "audio": "/audio/andani/scene-03a.mp3",
+      "choices": [
+        { "label": "🏙️ Look for Chicago!", "next": "scene-04" }
+      ]
+    },
+    "scene-03b": {
+      "id": "scene-03b",
+      "text": "Andani sat in the middle seat between Daddy and a nice lady who shared her crackers. The flight attendant brought Andani a special cup of apple juice with a tiny umbrella in it, and she felt like a real grown-up traveler. She drew pictures of airplanes in her coloring book until the pilot said, 'We're about to land in Chicago!'",
+      "image": "andani-03b-middle",
+      "audio": "/audio/andani/scene-03b.mp3",
+      "choices": [
+        { "label": "🏙️ We're Here!", "next": "scene-04" }
+      ]
+    },
+    "scene-04": {
+      "id": "scene-04",
+      "text": "The airplane landed with a little bump and Andani clapped her hands. Inside the big Chicago airport there were moving sidewalks that made her feel like she was gliding! Daddy held her hand as they walked outside and she saw the tall buildings of Chicago for the very first time. 'Wow, they're so big!' she said, her eyes wide with wonder.",
+      "image": "andani-04-landing",
+      "audio": "/audio/andani/scene-04.mp3",
+      "choices": [
+        { "label": "🌳 Visit the Park", "next": "scene-05a" },
+        { "label": "🍦 Get a Treat First", "next": "scene-05b" }
+      ]
+    },
+    "scene-05a": {
+      "id": "scene-05a",
+      "text": "Daddy took Andani to Millennium Park where the giant silver Bean was sparkling in the sunshine. Andani ran up and saw her own funny reflection — her head looked super tall and wiggly! She laughed and made silly faces at herself in the shiny metal. Then she saw the big fountain where giant faces spit water, and she danced in the splash.",
+      "image": "andani-05a-bean",
+      "audio": "/audio/andani/scene-05a.mp3",
+      "choices": [
+        { "label": "🎡 Explore More!", "next": "scene-06" }
+      ]
+    },
+    "scene-05b": {
+      "id": "scene-05b",
+      "text": "They found a little shop with every flavor of ice cream Andani could imagine. She picked pink strawberry with rainbow sprinkles on top, and Daddy got chocolate. They sat on a bench and watched the busy city people walking by while they licked their cones. A friendly pigeon waddled up hoping for a crumb, and Andani giggled.",
+      "image": "andani-05b-icecream",
+      "audio": "/audio/andani/scene-05b.mp3",
+      "choices": [
+        { "label": "🎡 Let's Explore!", "next": "scene-06" }
+      ]
+    },
+    "scene-06": {
+      "id": "scene-06",
+      "text": "Daddy took Andani on a boat ride down the Chicago River. The buildings on both sides were so tall they seemed to touch the sky. The tour guide pointed at each one and told funny stories about how they were built. Andani waved at people on the bridges above, and they waved back! The water sparkled green and gold in the afternoon sun.",
+      "image": "andani-06-boat",
+      "audio": "/audio/andani/scene-06.mp3",
+      "choices": [
+        { "label": "🌅 Watch the Sunset", "next": "scene-07a" },
+        { "label": "🍕 Pizza Time!", "next": "scene-07b" }
+      ]
+    },
+    "scene-07a": {
+      "id": "scene-07a",
+      "text": "They walked to the lakefront just as the sun started to set. The sky turned pink and orange and purple, and the water of Lake Michigan sparkled like a million tiny diamonds. Andani sat on Daddy's shoulders so she could see everything. 'This is the most beautiful thing I've ever seen,' she whispered. Daddy gave her a big squeeze and said, 'Me too, sweetheart. Me too.'",
+      "image": "andani-07a-sunset",
+      "audio": "/audio/andani/scene-07a.mp3",
+      "choices": [
+        { "label": "📖 The End!", "next": "home" }
+      ]
+    },
+    "scene-07b": {
+      "id": "scene-07b",
+      "text": "They found the most famous deep dish pizza place in all of Chicago. When the pizza arrived, it was as thick as a cake and filled with gooey melted cheese! Andani took one big bite and her eyes went wide — it was the yummiest thing she had ever tasted. She looked at Daddy and said, 'Can we come back to Chicago every single day?' Daddy laughed and said, 'How about every year?' Andani nodded so hard her pigtails bounced.",
+      "image": "andani-07b-pizza",
+      "audio": "/audio/andani/scene-07b.mp3",
+      "choices": [
+        { "label": "📖 The End!", "next": "home" }
+      ]
+    }
+  }
+}

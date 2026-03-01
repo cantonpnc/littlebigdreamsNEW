@@ -1,38 +1,19 @@
-import { useState, useEffect } from "react";
-import { SceneView } from "@/components/SceneView";
-import { StoryData } from "@/types/story";
+import { useState, useCallback } from "react";
+import { HomeScreen } from "@/components/HomeScreen";
+import { StoryPlayer } from "@/components/StoryPlayer";
 
 const Index = () => {
-  const [story, setStory] = useState<StoryData | null>(null);
-  const [currentSceneId, setCurrentSceneId] = useState<string>("");
+  const [storyFile, setStoryFile] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetch("/story.json")
-      .then((r) => r.json())
-      .then((data: StoryData) => {
-        setStory(data);
-        setCurrentSceneId(data.start);
-      });
+  const handleGoHome = useCallback(() => {
+    setStoryFile(null);
   }, []);
 
-  if (!story || !currentSceneId) {
-    return (
-      <div className="flex h-screen items-center justify-center bg-background">
-        <p className="font-display text-3xl text-foreground animate-wiggle">📖 Loading story…</p>
-      </div>
-    );
+  if (!storyFile) {
+    return <HomeScreen onSelectStory={setStoryFile} />;
   }
 
-  const scene = story.scenes[currentSceneId];
-  if (!scene) return null;
-
-  return (
-    <SceneView
-      scene={scene}
-      sceneId={currentSceneId}
-      onChoice={setCurrentSceneId}
-    />
-  );
+  return <StoryPlayer storyFile={storyFile} onHome={handleGoHome} />;
 };
 
 export default Index;

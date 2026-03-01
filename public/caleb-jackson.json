@@ -1,0 +1,159 @@
+{
+  "start": "scene-01",
+  "scenes": {
+    "scene-01": {
+      "id": "scene-01",
+      "text": "Caleb rubbed his eyes and jumped out of bed. 'Jackson! Wake up! Today's the day we go to the Willis Tower!' Three-year-old Jackson came running down the hall in his dinosaur pajamas, so excited he forgot to put on his slippers. Mom was already in the kitchen packing snacks, and she smiled and said, 'Okay boys, how should we get to Chicago?'",
+      "image": "scene-01-home",
+      "audio": "/audio/scene-01-home.mp3",
+      "choices": [
+        { "label": "🚂 Take the Metra Train", "next": "scene-02a" },
+        { "label": "🚗 Drive in the Car", "next": "scene-02b" }
+      ]
+    },
+    "scene-02a": {
+      "id": "scene-02a",
+      "text": "Caleb and Jackson stood on the platform at the Glenview train station, and when the big train rumbled in, Jackson grabbed Caleb's hand. They found the perfect window seat and watched houses and trees blur past as Chicago's giant buildings slowly appeared on the horizon. As the train pulled into the city, their tummies started to growl.",
+      "image": "scene-02a-train",
+      "audio": "/audio/scene-02a-train.mp3",
+      "choices": [
+        { "label": "🌭 Stop for a Hot Dog", "next": "scene-03a" },
+        { "label": "🍪 Go to the Bakery", "next": "scene-03b" }
+      ]
+    },
+    "scene-02b": {
+      "id": "scene-02b",
+      "text": "Mom buckled Caleb and Jackson into their car seats and they hit the highway headed south toward Chicago. Jackson counted seven red cars and Caleb spotted the Willis Tower first, shouting 'I SEE IT!' as it poked above all the other buildings. They needed to park the car before the adventure could really begin.",
+      "image": "scene-02b-car",
+      "audio": "/audio/scene-02b-car.mp3",
+      "choices": [
+        { "label": "🌳 Park near Millennium Park", "next": "scene-03c" },
+        { "label": "🌊 Park near the River", "next": "scene-03d" }
+      ]
+    },
+    "scene-03a": {
+      "id": "scene-03a",
+      "text": "The hot dog man had a big cart with a striped umbrella, and he showed Caleb and Jackson exactly how to make a real Chicago hot dog — mustard, relish, tomato, and a pickle, but absolutely NO ketchup! Jackson took one giant bite and got mustard on his nose, which made Caleb laugh so hard he nearly dropped his. Now it was time to find the Willis Tower.",
+      "image": "scene-03a-hotdog",
+      "audio": "/audio/scene-03a-hotdog.mp3",
+      "choices": [
+        { "label": "🚌 Take the Bus", "next": "scene-04a" },
+        { "label": "🛴 Rent a Scooter", "next": "scene-04b" }
+      ]
+    },
+    "scene-03b": {
+      "id": "scene-03b",
+      "text": "The little bakery inside the station smelled like cinnamon and warm bread, and the lady behind the counter gave Caleb and Jackson each a free cookie just for being so polite. They sat on a bench, ate their snacks, and watched all the busy people rushing through the station with their briefcases and coffee cups. Fueled up and ready, they headed out into the big city.",
+      "image": "scene-03b-bakery",
+      "audio": "/audio/scene-03b-bakery.mp3",
+      "choices": [
+        { "label": "🚶 Walk the Riverwalk", "next": "scene-03d" },
+        { "label": "🚕 Hail a Taxi", "next": "scene-04a" }
+      ]
+    },
+    "scene-03c": {
+      "id": "scene-03c",
+      "text": "Mom parked the car and they walked into Millennium Park where the giant silver Bean sat gleaming in the sunshine. Caleb and Jackson ran up and saw their own funny stretched-out reflections looking back at them — Jackson's head looked like a balloon! They giggled and pressed their faces against the cool metal until Mom said it was time to keep moving.",
+      "image": "scene-03c-bean",
+      "audio": "/audio/scene-03c-bean.mp3",
+      "choices": [
+        { "label": "🚌 Take the Bus", "next": "scene-04a" },
+        { "label": "🛴 Rent a Scooter", "next": "scene-04b" }
+      ]
+    },
+    "scene-03d": {
+      "id": "scene-03d",
+      "text": "They parked near the river and walked out onto a bridge where the water below was a beautiful emerald green. A huge architectural boat tour floated underneath them and the tour guide waved up at Caleb and Jackson, who waved back as hard as they could. The Willis Tower was only a few blocks away now.",
+      "image": "scene-03d-river",
+      "audio": "/audio/scene-03d-river.mp3",
+      "choices": [
+        { "label": "🚤 Take a Boat Ride", "next": "scene-04a" },
+        { "label": "🌉 Walk into the City", "next": "scene-04b" }
+      ]
+    },
+    "scene-04a": {
+      "id": "scene-04a",
+      "text": "Caleb and Jackson climbed up the big steps of the city bus and dropped coins into the machine — clink, clink! They rode on the very top deck and Caleb pointed out every tall building he could see while Jackson waved at people on the sidewalk below. The bus driver called out 'Willis Tower, next stop!' and the boys jumped up ready to go.",
+      "image": "scene-04a-bus",
+      "audio": "/audio/scene-04a-bus.mp3",
+      "choices": [
+        { "label": "🍦 Get Ice Cream First", "next": "scene-04c" },
+        { "label": "🏃 Run to the Tower", "next": "scene-04d" }
+      ]
+    },
+    "scene-04b": {
+      "id": "scene-04b",
+      "text": "Mom helped Caleb and Jackson onto a big scooter and they zoomed down the wide sidewalk, the wind blowing their hair back and making Jackson squeal with delight. They zipped past fancy restaurants and tall glass buildings until the Willis Tower appeared right in front of them, so huge it seemed to go all the way up to the clouds. They parked the scooter and craned their necks all the way back trying to see the top.",
+      "image": "scene-04b-scooter",
+      "audio": "/audio/scene-04b-scooter.mp3",
+      "choices": [
+        { "label": "📸 Take a Photo Outside", "next": "scene-04d" },
+        { "label": "🚪 Rush Inside", "next": "scene-05a" }
+      ]
+    },
+    "scene-04c": {
+      "id": "scene-04c",
+      "text": "Right outside the Willis Tower there was a colorful ice cream cart. Caleb picked strawberry and Jackson picked chocolate with sprinkles. They stood on the sidewalk licking their cones with the biggest building in Chicago towering above them. Jackson looked up and up and up and said, 'Is that where the clouds sleep?'",
+      "image": "scene-04c-icecream",
+      "audio": "/audio/scene-04c-icecream.mp3",
+      "choices": [
+        { "label": "🚪 Head Inside!", "next": "scene-05a" }
+      ]
+    },
+    "scene-04d": {
+      "id": "scene-04d",
+      "text": "They stood at the base of the Willis Tower and tilted their heads all the way back. The building went up and up and up until it disappeared into the sky. Caleb counted the windows for a few seconds then stopped because there were way too many. Jackson just stood there with his mouth open. It was the biggest thing either of them had ever seen.",
+      "image": "scene-04d-tower-outside",
+      "audio": "/audio/scene-04d-tower-outside.mp3",
+      "choices": [
+        { "label": "🚪 Go Inside!", "next": "scene-05a" }
+      ]
+    },
+    "scene-05a": {
+      "id": "scene-05a",
+      "text": "The lobby of the Willis Tower was enormous, with ceilings so high that Caleb said it felt like being inside a giant. A friendly security guard crouched down and told them that the Skydeck was 103 floors up — that's higher than any bird flies! Jackson held Mom's hand a little tighter as they waited for the elevator doors to open.",
+      "image": "scene-05a-lobby",
+      "audio": "/audio/scene-05a-lobby.mp3",
+      "choices": [
+        { "label": "🛗 Into the Elevator!", "next": "scene-05b" }
+      ]
+    },
+    "scene-05b": {
+      "id": "scene-05b",
+      "text": "The elevator doors opened with a soft whoosh. Caleb stepped in first, then Jackson, then Mom. The doors closed and for a moment everything was quiet. Then... whoooosh. Up they went. One hundred and three floors in just about a minute. Caleb's tummy did a little flip and Jackson giggled the whole way up.",
+      "image": "scene-05b-elevator",
+      "audio": "/audio/scene-05b-elevator.mp3",
+      "choices": [
+        { "label": "🏙️ Go to the Skydeck", "next": "scene-06a" },
+        { "label": "😱 Step onto The Ledge", "next": "scene-06b" }
+      ]
+    },
+    "scene-06a": {
+      "id": "scene-06a",
+      "text": "When the elevator doors opened the whole city of Chicago was spread out before them like a giant map. Caleb found Lake Michigan sparkling blue in the distance and Jackson found a tiny green patch that Mom said was Millennium Park where the Bean was. They pressed their hands against the cold glass and looked for Glenview way up north, and Caleb was pretty sure he could see it.",
+      "image": "scene-06a-skydeck",
+      "audio": "/audio/scene-06a-skydeck.mp3",
+      "choices": [
+        { "label": "🍕 Time for Pizza!", "next": "scene-07" }
+      ]
+    },
+    "scene-06b": {
+      "id": "scene-06b",
+      "text": "Jackson was a little nervous but Caleb said 'I'll go first!' and stepped out onto the glass floor of The Ledge, where he could see straight down 103 floors to the tiny little cars and people below. His legs felt a little wobbly but he held on and grinned the biggest grin of his whole life. Jackson took a deep breath, grabbed Caleb's hand, and stepped out too — and then they both laughed because it felt like flying.",
+      "image": "scene-06b-ledge",
+      "audio": "/audio/scene-06b-ledge.mp3",
+      "choices": [
+        { "label": "🍕 Time for Pizza!", "next": "scene-07" }
+      ]
+    },
+    "scene-07": {
+      "id": "scene-07",
+      "text": "After the best view either of them had ever seen, everyone agreed there was only one way to end a perfect Chicago adventure. They found a deep dish pizza place just two blocks from the Willis Tower, and when the pizza arrived it was so tall and gooey and cheesy that Jackson's eyes went wide as dinner plates. Caleb declared it the best day of his entire life, and Jackson — mouth full of pizza — nodded as hard as he could. Mom smiled and said, 'Same time next year?'",
+      "image": "scene-07-pizza",
+      "audio": "/audio/scene-07-pizza.mp3",
+      "choices": [
+        { "label": "📖 Read Again!", "next": "home" }
+      ]
+    }
+  }
+}
