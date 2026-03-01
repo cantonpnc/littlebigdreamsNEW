@@ -52,6 +52,14 @@ export function SceneView({ scene, sceneId, onChoice, onHome }: SceneViewProps) 
     setHasStartedStory(true);
   }, []);
 
+  const handleNext = useCallback(() => {
+    if (scene.choices.length === 1) {
+      handleChoice(scene.choices[0].next);
+    } else {
+      setShowChoices(true);
+    }
+  }, [scene.choices]);
+
   const handleChoice = useCallback((nextId: string) => {
     if (transitioning) return;
     setTransitioning(true);
@@ -76,6 +84,16 @@ export function SceneView({ scene, sceneId, onChoice, onHome }: SceneViewProps) 
       >
         ← Home
       </button>
+
+      {/* Next button */}
+      {!showChoices && !shouldShowStartButton && (
+        <button
+          onClick={handleNext}
+          className="absolute bottom-4 right-4 z-30 font-display text-lg md:text-xl bg-white/80 hover:bg-white/95 active:scale-95 rounded-full px-5 py-2 shadow-md transition-all duration-200"
+        >
+          Next →
+        </button>
+      )}
 
       {/* Image section - larger on mobile */}
       <div className="h-[70vh] md:h-[60vh] w-full relative bg-black flex-shrink-0">
