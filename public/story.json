@@ -18,7 +18,7 @@
       "audio": "/audio/scene-02a-train.mp3",
       "choices": [
         { "label": "🌭 Stop for a Hot Dog", "next": "scene-03a" },
-        { "label": "🥐 Grab a Muffin", "next": "scene-03b" }
+        { "label": "🧁 Grab a Muffin", "next": "scene-03b" }
       ]
     },
     "scene-02b": {
