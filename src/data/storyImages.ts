@@ -31,6 +31,7 @@ import andani06bColoring from "@/assets/scenes/andani-06b-coloring.png";
 import andani07Turbulence from "@/assets/scenes/andani-07-turbulence.png";
 import andani07aMovie from "@/assets/scenes/andani-07a-movie.png";
 import andani07bClouds from "@/assets/scenes/andani-07b-clouds.png";
+import andani08Food from "@/assets/scenes/andani-08-food.png";
 import andani08aFood from "@/assets/scenes/andani-08a-food.png";
 import andani08bSleeping from "@/assets/scenes/andani-08b-sleeping.png";
 import andani09Chicago from "@/assets/scenes/andani-09-chicago.png";
@@ -77,7 +78,7 @@ export const sceneImages: Record<string, string> = {
   "andani-07-turbulence": andani07Turbulence,
   "andani-07a-movie": andani07aMovie,
   "andani-07b-clouds": andani07bClouds,
-  "andani-08-food": andani08aFood, // Food served
+  "andani-08-food": andani08Food,
   "andani-08a-eating": andani08aFood,
   "andani-08b-sleeping": andani08bSleeping,
   "andani-09-chicago": andani09Chicago,
