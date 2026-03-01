@@ -12,14 +12,19 @@ interface SceneViewProps {
 export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
   const [showChoices, setShowChoices] = useState(false);
   const [transitioning, setTransitioning] = useState(false);
+  const [hasStartedStory, setHasStartedStory] = useState(false);
+
+  const shouldShowStartButton = sceneId === "scene-01" && !hasStartedStory;
 
   useEffect(() => {
     setShowChoices(false);
     setTransitioning(false);
 
+    if (shouldShowStartButton) return;
+
     // Audio Narration
     const audio = new Audio(scene.audio);
-    
+
     const playAudio = async () => {
       try {
         await audio.play();
@@ -31,10 +36,10 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
       }
     };
 
-    // Longer delay for first scene load, shorter for transitions
-    const delay = sceneId === "scene-01" ? 3000 : 600;
+    // Start quickly after user taps start on first scene
+    const delay = sceneId === "scene-01" ? 100 : 600;
     const timer = setTimeout(() => {
-      playAudio();
+      void playAudio();
     }, delay);
 
     return () => {
@@ -42,7 +47,11 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
       audio.pause();
       audio.currentTime = 0;
     };
-  }, [sceneId, scene.text, scene.audio]);
+  }, [sceneId, scene.audio, shouldShowStartButton]);
+
+  const handleStartStory = useCallback(() => {
+    setHasStartedStory(true);
+  }, []);
 
   const handleChoice = useCallback((nextId: string) => {
     if (transitioning) return;
@@ -73,6 +82,18 @@ export function SceneView({ scene, sceneId, onChoice }: SceneViewProps) {
           {scene.text}
         </p>
       </div>
+
+      {/* Start Story Button - First Scene */}
+      {shouldShowStartButton && (
+        <div className="absolute inset-x-0 bottom-0 p-6 pb-8 md:pb-20 flex justify-center bg-gradient-to-t from-black/60 to-transparent">
+          <ChoiceButton
+            label="▶️ Start the Story"
+            index={0}
+            isRestart
+            onClick={handleStartStory}
+          />
+        </div>
+      )}
 
       {/* Choices - Bottom Center */}
       {showChoices && (
