@@ -1,0 +1,13 @@
+{
+  "startScene": "scene-01",
+  "childName": "friend",
+  "lesson": "",
+  "scenes": {
+    "scene-unknown": {
+      "id": "scene-unknown",
+      "image": "images/scene-unknown.png",
+      "audio": "audio/scene-unknown.mp3",
+      "choices": []
+    }
+  }
+}
